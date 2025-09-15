@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Markdown Previewer</title>
+
+    <!-- Basic styling -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Marked (for GitHub-flavored Markdown parsing) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- DOMPurify to sanitize HTML produced by marked -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Markdown Previewer</h1>
+            <p class="subtitle">Type GitHub-flavored Markdown on the left — live preview on the right.</p>
+        </header>
+
+        <section class="panels">
+            <div class="panel panel-editor">
+                <div class="panel-header">
+                    <strong>Editor</strong>
+                </div>
+                <!-- User Story #1: textarea with id="editor" -->
+                <textarea id="editor" aria-label="Markdown Editor"></textarea>
+            </div>
+
+            <div class="panel panel-preview">
+                <div class="panel-header">
+                    <strong>Preview</strong>
+                </div>
+                <!-- User Story #2: element with id="preview" -->
+                <div id="preview" class="preview" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <small>Built with <a href="https://marked.js.org/" target="_blank" rel="noopener">marked</a> + <a
+                    href="https://github.com/cure53/DOMPurify" target="_blank" rel="noopener">DOMPurify</a></small>
+        </footer>
+    </main>
+
+    <!-- FreeCodeCamp test script (if you want to run their tests locally) -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <!-- App script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
