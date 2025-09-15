@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pomodoro Timer - FCC</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="title">Pomodoro Timer</h1>
+
+        <section class="length-controls">
+            <div class="control">
+                <div id="break-label" class="label">Break Length</div>
+                <div class="buttons">
+                    <button id="break-decrement" class="btn">-</button>
+                    <div id="break-length" class="value">5</div>
+                    <button id="break-increment" class="btn">+</button>
+                </div>
+            </div>
+
+            <div class="control">
+                <div id="session-label" class="label">Session Length</div>
+                <div class="buttons">
+                    <button id="session-decrement" class="btn">-</button>
+                    <div id="session-length" class="value">25</div>
+                    <button id="session-increment" class="btn">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="timer">
+            <div id="timer-label" class="timer-label">Session</div>
+            <div id="time-left" class="time-left">25:00</div>
+
+            <div class="controls-row">
+                <button id="start_stop" class="action-btn">Start / Stop</button>
+                <button id="reset" class="action-btn alt">Reset</button>
+            </div>
+        </section>
+
+        <!-- audio: id="beep" required by tests. length >= 1s. -->
+        <!-- Using an external short sound that is >= 1s. If you want to self-host, replace src accordingly. -->
+        <audio id="beep" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+    </main>
+    <script src="script.js"></script>
+    <!-- FreeCodeCamp test bundle (required if you run in FCC test runner) -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>
